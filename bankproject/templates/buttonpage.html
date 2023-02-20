@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+{% block body %}
+<br>
+<center>
+    <h3 style="color:red;"><u>Account Opening</u></h3><br>
+<h3 style="color:green;"><u>1.Savings Account</u></h3></center>
+    <p style="padding:50px; font-size:20px; line-height:50px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As the name suggests, the savings accounts can be opened by an individual or jointly by two people with an aim to save money.
+
+The main benefit of opening a savings bank account is that the bank pays you interest for opening this type of account with them. <br>
+
+<u>Given below are a few features of the Savings account:</u><br>
+
+1.There is no limit to the number of times the account holder can deposit money in this account but there is a restriction on the number of times money can be withdrawn from this account. <br>
+2.The rate of interest that an account holder get varies from 4% to 6% per annum<br>
+3.There is no minimum balance that needs to be maintained for this type of an account<br>
+4.The savings account holders can get an ATM/Debit/Rupay Card if they want to<br>
+5.Savings bank account is further divided into two types: Basic Savings Bank Deposit Account (BSBDA) and the other one is Basic Saving Bank Deposit Accounts Small Scheme(BSBDS)<br>
+6.The savings bank account is mostly eligible for students, pensioners and working professionals<br>
+    </p>
+<center>
+<h3 style="color:green;"><u>2.Current Account</u></h3></center>
+    <p style="padding:50px; font-size:20px; line-height:50px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The second type of bank account is the current bank account. These accounts are not used for the purpose of savings.<br>
+
+<u>Some important pointers related to the current bank account have been discussed below:</u><br>
+
+1.This type of bank account is mostly opened by businessmen. Associations, Institutions, Companies, Religious Institutions and other business-related works, the current account can be opened<br>
+2.There is no fixed number of times that money can either be deposited or withdrawn from such accounts<br>
+3.Internet banking is available<br>
+4.This type of bank account does not have any fixed maturity<br>
+5.Overdraft facility is available for current bank accounts<br>
+
+    </p>
+
+<center>
+   <a href=" {% url 'accountopening' %}">
+     <input style="height:50px;width:200px; background-color:blue;font-size: 20px;color: white";  type="submit"  value="Account Opening" >
+</a>
+</center>
+<br><br>
+{% endblock %}

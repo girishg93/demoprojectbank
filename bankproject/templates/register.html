@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block body %}
+<br>
+<h1 style="height:100px;width:1500px;font-size:60px;text-align:center";>Register</h1>
+<center>
+<form action="" method="post">
+    {% csrf_token %}
+    Username:&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" name="usrnme" required><br><br>
+    Password:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="password" name="pswd" required><br><br>
+    Confirm Password:&emsp;<input type="password" name="pswd1" required><br><br>
+     <input style="height:40px;width:100px; background-color:#FFA500;font-size: 20px;color: white";  type="submit"  value="Signup">
+
+    <br><br>
+
+</form>
+
+<h4 style="color:red;">
+    {% for i in messages %}
+    {{ i }}
+    {% endfor %}
+</h4>
+</center>
+
+{% endblock%}

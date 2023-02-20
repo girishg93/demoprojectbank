@@ -1,0 +1,105 @@
+{% extends 'index.html' %}
+
+<style>
+      {% block style %}
+      {% endblock %}
+      </style>
+
+
+{% block body %}
+<br>
+<h1 style="height:100px;width:1500px;text-align:center";>Account Opening</h1>
+<br>
+
+        <style>
+table, th, td {
+  border: 0px solid black;
+  border-collapse: collapse;
+}
+td {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+</style>
+
+
+<center>
+<form action="" onsubmit="myFunction()" method="post" >
+{% csrf_token %}
+<table style="width:50%">
+
+  <tr>
+    <td>Name</td>
+    <td><input type="text" name="usrnme" required></td>
+
+  </tr>
+  <tr>
+    <td>D.O.B</td>
+    <td><input type="date" name="dt" required></td>
+
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td><input type="text" name="ag" required></td>
+  </tr>
+   <tr>
+    <td>Gender</td>
+    <td><input type="radio" id="male" name="radiobutton" value="Male" required>
+        <label for="MALE">Male</label>
+        <input type="radio" id="female" name="radiobutton" value="Female">
+        <label for="FEMALE">Female</label></td>
+  </tr>
+  <tr>
+    <td>Phone numbertd
+    <td><input type="number" id="cc" name="phn_no" required></td>
+  </tr>
+  <tr>
+    <td>Mail id</td>
+    <td><input type="email" name="email" required></td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td><textarea name="address" rows="3" cols="40" required></textarea></td>
+  </tr>
+  <tr>
+    <td>District</td>
+    <td><select name="country" id="country" required></td>
+  </tr>
+  <tr>
+    <td>Branches</td>
+    <td><select name="state" id="state" required></select> </td>
+  </tr>
+  <tr>
+    <td>Account Type</td>
+    <td><select name="acc_type" required>
+        <option value="current"></option>
+        <option value="current">Current</option>
+        <option value="savings">Savings</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td>Material Provides</td>
+    <td><input type="checkbox" id="debit" name="debit" value="debitcard" >
+  <label for="Debit"> Debit Card</label><br>
+  <input type="checkbox" id="credit" name="credit" value="creditcard">
+  <label for="Credit"> Credit Card</label><br>
+  <input type="checkbox" id="cheque" name="cheque" value="chequebook">
+  <label for="ChequeBook"> Cheque Book</label></td>
+  </tr>
+
+</table>
+ &emsp;<input style="height:50px;width:200px; background-color: green;font-size: 20px;color: white";  type="submit"  value="Open Account"><br><br>
+
+
+    <script>
+function myFunction() {
+  alert("Your Application submitted successfully!");
+
+}
+</script>
+</form>
+    <a href="{% url 'home' %}"><input style="height:51px;width:100px; background-color: green;font-size: 20px;color: white";  type="submit"  value="Home"></a>
+</center>
+{% endblock %}

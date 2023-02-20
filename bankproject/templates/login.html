@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block body%}
+<br>
+<h1 style="height:100px;width:1500px;text-align:center";>Login</h1>
+<center>
+<form action="" method="post">
+    {% csrf_token %}
+    Username: &emsp;&emsp;&emsp;<input type="text" onfocus="this.value=''" name="usrnme"><br><br>
+    Password: &emsp;&emsp;&emsp;<input type="password" onfocus="this.value=''" name="pswd"><br><br>
+    <input style="height:40px;width:100px; background-color:green;font-size: 20px;color: white";  type="submit" class="orange-button" value="Login" >
+    <br><br>
+</form>
+
+    {% for i in messages %}
+    {{ i }}
+    {% endfor %}
+</center>
+{% endblock %}
